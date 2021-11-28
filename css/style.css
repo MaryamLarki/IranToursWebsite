@@ -11,13 +11,17 @@ My Colors:
     box-sizing: border-box;
 }
 
+html{
+    font-size: 10px;
+}
+
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: rgb(255, 242, 234);
-    padding: 20px;
+    padding: 2rem;
 }
 
 .header{
@@ -62,30 +66,30 @@ body{
 
 .primary-heading-main{
     display: block;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 400;
-    letter-spacing: 21px;
+    letter-spacing: 2.1rem;
     text-align: center;
     animation: MoveInLeft 0.7s forwards;
 }
 
 .primary-heading-sub{
     display: block;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 700;
-    letter-spacing: 19px;
+    letter-spacing: 1.9rem;
     text-align: center;
     animation: MoveInRight 0.7s forwards;
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
 }
 
 @keyframes MoveInLeft {
     0%{
        opacity: 0;
-       transform: translateX(-100px); 
+       transform: translateX(-10rem); 
     }
     80%{
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
     100%{
         opacity: 1;
@@ -96,10 +100,10 @@ body{
 @keyframes MoveInRight {
     0%{
         opacity: 0;
-        transform: translateX(100px); 
+        transform: translateX(10rem); 
      }
      80%{
-         transform: translateX(-10px);
+         transform: translateX(-1rem);
      }
      100%{
          opacity: 1;
@@ -110,23 +114,24 @@ body{
 
 .btn:link,
 .btn:visited{
+    font-size: 1.6rem;
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 7px 30px;
-    border-radius: 100px;
+    padding: 0.7rem 3rem;
+    border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
 }
 
 .btn:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.8rem 1.8rem rgba(0,0,0,0.3);
 }
 
 .btn:active{
     transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.3);
 }
 
 .btn-white{
@@ -142,7 +147,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 100px;
+    border-radius: 10rem;
     z-index: -1;
     transition: all 0.4s;
 }
@@ -159,10 +164,10 @@ body{
 @keyframes MoveUp {
     0%{
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(10rem);
     }
     80%{
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
     100%{
         opacity: 1;
