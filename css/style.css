@@ -5,27 +5,29 @@ My Colors:
 #4c8389
 */
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html{
-    font-size: 10px;
+    font-size: 62.5%;
 }
 
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
-    /* font-size: 16px; */
     line-height: 1.7;
     color: rgb(255, 242, 234);
-    padding: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .header{
-    height: 95vh; 
+    height: 96vh; 
     background-image: linear-gradient(
         to right bottom,
         hsla(186, 29%, 42%, 0.800), 
@@ -35,20 +37,20 @@ body{
     background-position: top;
     position: relative;
 
-    /* clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%) ; */
-    clip-path: polygon(0 10%, 30% 0,70% 0,100% 10%, 100% 90%, 70% 100%, 30% 100%, 0% 90%);
+    clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%) ;
+    /* clip-path: polygon(0 10%, 30% 0,70% 0,100% 10%, 100% 90%, 70% 100%, 30% 100%, 0% 90%); */
     /* clip-path: polygon(0 10%, 30% 0,70% 0,100% 10%, 100% 100%, 0% 100%); */
     /* clip-path: circle(75% at 50% 100%); */
 }
 /* 
 .logo-box{
     position: absolute;
-    top: 20px;
-    left: 30px;
+    top: 2rem;
+    left: 3rem;
 }
 
 .logo{
-    height: 80px;
+    height: 8rem;
 } */
 
 .header-text-box{
@@ -70,7 +72,7 @@ body{
     font-weight: 400;
     letter-spacing: 2.1rem;
     text-align: center;
-    animation: MoveInLeft 0.7s forwards;
+    animation: MoveInLeft .7s forwards;
 }
 
 .primary-heading-sub{
@@ -79,7 +81,7 @@ body{
     font-weight: 700;
     letter-spacing: 1.9rem;
     text-align: center;
-    animation: MoveInRight 0.7s forwards;
+    animation: MoveInRight .7s forwards;
     margin-bottom: 5rem;
 }
 
@@ -118,20 +120,21 @@ body{
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 0.7rem 3rem;
+    padding: .7rem 3rem;
     border-radius: 10rem;
-    transition: all 0.2s;
+    transform: translateY(0);
+    transition:  all 0.2s;
     position: relative;
 }
 
 .btn:hover{
     transform: translateY(-0.2rem);
-    box-shadow: 0 0.8rem 1.8rem rgba(0,0,0,0.3);
+    box-shadow: 0 .8rem 1.8rem rgba(0,0,0,0.3);
 }
 
 .btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.3);
+    transform: translateY(-0.1rem);
+    box-shadow: 0 .4rem 1rem rgba(0,0,0,0.3);
 }
 
 .btn-white{
@@ -149,7 +152,7 @@ body{
     left: 0;
     border-radius: 10rem;
     z-index: -1;
-    transition: all 0.4s;
+    transition: all .4s;
 }
 
 .btn-white::after{
@@ -176,5 +179,5 @@ body{
 }
 
 .btn-animated{
-    animation: MoveUp 0.5s 0.5s both ease-out;
+    animation: MoveUp .5s .5s backwards ease-out;
 }
